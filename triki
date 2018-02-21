@@ -1,0 +1,95 @@
+package Test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Pruebas {
+	static String triki [] = new String [9];
+	BufferedReader br = new BufferedReader (new InputStreamReader(System.in) );
+	BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
+	
+	public static String Triki( String vect[]){
+		int i=0;
+		String triki [] = new String [9];
+		for (i = 0; i < triki.length; i++) 
+			triki[i]= "_";
+			
+		return triki[i];
+			
+	}
+	
+	public static void  TopeJuego (){
+		
+		int [] Tope = new int [9];
+		int libre=0;
+		
+	}
+
+	
+	public static String[]  BusquedaHorizontal ( int inicio, int tope, int paso){
+		int salto=paso; int i= inicio; int ciclo=0;
+		
+		String [] PFila= new String[3];
+		PFila[0]="O"; PFila[1]="O"; PFila[2]="O";
+		TopeJuego();
+		while(true){
+			System.out.println("_");
+			if (ciclo==0){
+				if (triki[i].equals(triki[(i*1)+paso])) {
+					PFila[0]=""+((i*1)+paso*2);
+					PFila[1]="O";
+					PFila[2]=triki[i];
+					break;
+				}
+				
+				if(triki[i].equals(triki[i+paso*2]) ){
+					PFila[0]=""+(i+paso);
+					PFila[1]="O";
+					PFila[2]=triki[i];
+					break;
+				}	
+			}
+			else if(ciclo==1){
+				if(triki[i].equals(triki[i+paso])){
+					PFila[0]=""+(i-paso);
+					PFila[1]="O";
+					PFila[2]=triki[i];
+					break;
+				}
+			}
+			i +=paso;
+			ciclo++;
+			
+			if(i<tope)
+			{break;}
+		}
+		return PFila;
+	
+		
+	}
+	public static String[] BusquedaVertical(int array[]){
+		
+		int vector[]=new int [3];
+		TopeJuego();
+		for (int i = 0; i < vector.length; i+=3) {
+			
+			if (vector[i]="_" && vector[3]="") {
+				
+			}
+			}
+		
+		
+		
+		
+		return null;	
+	}
+	
+	
+	
+
+}
+
+
+
