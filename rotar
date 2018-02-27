@@ -1,0 +1,62 @@
+import java.io.OutputStream;
+import java.io.InputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+public class Rotar{
+
+   public static void CientoO(int array[]) Throws.IOException(){
+  
+      
+	  int array[]=new int [array.length];
+         for (int i =0; i < array.length; i--) {
+		 System.out.print(array[i]);
+		 }
+
+
+    }
+	
+	public static void Noventa(int array[]) {
+
+	   int array[]=new int [array.length];
+         for (int i =0; i < array.length; i++) {
+		 System.out.print(array[i]);
+		 }
+	
+
+	
+	}
+   
+    public static void Dosetenta(int array[]) {
+
+	   int array[]=new int [array.length];
+         for (int i =0; i < array.length; i--) {
+		  System.out.print(array[i]);
+            }
+			
+
+	
+	}
+	
+
+public static void main (String [] args){
+	
+   BufferedReader br = new BufferedReader (new InputStreamReader(System.in);
+   BufferedReader bw = new BufferedWriter (new OutputStreamWriter(System.out);
+   bw.write("escriba los números del arreglo");
+   bw.flush();
+   int array[]=new int [array.length];
+         for (int i =0; i < array.length; i++) {
+		  array = Integer.parseint(br.readLine())
+            }
+		bw.writer("el arreglo girado 90° es");
+		Noventa(array);
+		bw.writer("el arreglo girado 180° es");
+		CientoO(array);
+		bw.writer("el arreglo girado 270° es");
+		Dosetenta(array);
+			
+			
+ }
+
+  
+}
