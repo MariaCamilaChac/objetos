@@ -1,0 +1,49 @@
+public class BuscaMinas{
+	
+	public static void Minas(String matrix[][]){
+	 String matrix[][] = new String [matrix.length][matrix.length];
+	int i=0; int j=0;
+    	while(matrix[i][j]==" "{
+	        matrix[i][j]= M;
+	    }
+	 
+	i++;
+	j++;
+	 }
+		
+	
+	public static void Tapa(int matrix[][]){
+	 int matrix[][] = new int [matrix.length][matrix.length];
+	 for i =0 ; i < matrix.length ; i++{
+		 matrix[i]= null;
+		System.out.println(array[i]);
+		for j=1; j < matrix.length ; i++{
+			matrix[j]=null;
+			System.out.print(array[j]);
+		
+		}
+	 }
+	}
+	
+	public static void rellenar(int matrix[][]){
+	 int matrix[][] = new int [matrix.length][matrix.length];
+	 for i =0 ; i < matrix.length ; i++{
+		 matrix[i]= math.random(0,10);
+		System.out.println(array[i]);
+		for j=1; j < matrix.length ; i++{
+			matrix[j]=null;
+			System.out.print(array[j]);
+		
+		}
+	 }
+	 
+	}
+	
+
+	
+	public static void main (String [] args){
+	
+	
+	}
+
+}
