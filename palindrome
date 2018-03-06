@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+
+public class letra {
+	
+	public static void main(String[]args) throws IOException{
+		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
+		
+		bw.write("escriba la palabra \n");
+		bw.flush();
+		String palabra= new String(br.readLine());
+		
+		StringBuilder builder = new StringBuilder (palabra);
+		String CadenaInvertida = builder.reverse().toString();
+		bw.write(CadenaInvertida + "\n");
+		bw.flush();
+		if (palabra.equals(CadenaInvertida)){
+			bw.write("Sí es palindrome");
+		    bw.flush();
+		}else
+			bw.write("NO es palindrome");
+		    bw.flush();
+		
+		
+	}
+}
