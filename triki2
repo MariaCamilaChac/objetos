@@ -1,0 +1,141 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Triki {
+	
+	public static void Matriz ( int array [][]){
+		
+		for (int i = 0; i < 3; i++) {
+			
+			System.out.println("");
+			for (int j = 0; j < 3; j++) {
+				
+				System.out.print("["+ array[i][j]+"]");
+				
+				
+			}
+		}
+	}
+	
+	
+	public static void Busqueda (int array [][]){
+		int inicio=0, largo=array.length-1, n=0;
+		int comparacion = 0;
+
+		
+	      int elementos=array.length*array.length;
+		  while (n < elementos) {
+			  
+			  for (int i = inicio; i <= largo; i++) {
+				 comparacion = array[inicio][i];
+				 n++;
+					 }
+ 
+			  
+			  for (int i = inicio+1; i <= largo; i++) {
+				  comparacion = array[inicio][i];
+				  n++;
+			  }
+				  
+		 
+			  for (int i = inicio+2; i <= largo; i++) {
+					 comparacion = array[inicio][i];
+					 n++;
+			  }
+
+		  
+			  for (int i = largo; i >= inicio; i--) {
+					 comparacion = array[i][inicio];		 
+					 n++;
+			  }
+
+			  
+			  for (int i = inicio; i <= largo-1; i++) {
+				   comparacion = array[i][largo];
+				   n++;
+			  }
+
+			  
+			  for (int i = inicio; i <= largo-2; i++) {
+				    comparacion = array[i][largo];
+				    n++;
+		     }
+	
+		
+		     for (int i = inicio; i <= largo; i++) {
+		    	 comparacion = array[i][largo];
+				 n++;
+		     }
+
+		     
+		     for (int i = largo; i >= inicio; i--) {
+				 comparacion = array[largo][i];	
+				 n++;
+		     }
+
+		     
+		     for (int i = 0; i < array.length; i++) {
+		    	 for (int j = 0; j < array.length; j++) {	
+				  if (i==j) 
+					  comparacion = array[i][j];
+		    	 
+		    	 }
+			  }
+						
+			  
+			  for (int i = 0; i < array.length; i++) {
+				  for (int j = array.length-1; j >= 0; j--) {
+					  
+					  comparacion = array[i][j];  					  
+				  }
+			  }
+			  if (comparacion == 1 || comparacion ==2) 
+						System.out.println("\n ¡Ganaste!");
+			  
+		  }
+	  
+	}
+	
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
+
+		
+		int array [][]= new int [3][3];
+		Triki.Matriz(array);
+		
+		
+		Boolean Juego = true;
+		  
+		  while(Juego){
+		   
+		   System.out.println("\nEn que Fila desea jugar");
+		   int F = Integer.parseInt(br.readLine());
+		   System.out.println("En que Columna desea jugar");
+		   int C = Integer.parseInt(br.readLine());
+		   
+		   array[F][C] = 1;
+		     
+		    if(array[F][C] == 2){
+		    	System.out.println(" el espacio ya está ocupado");
+		    }
+		    else
+		    	 for (int i = 0; i < array.length; i++) {
+		    	      for (int j = 0; j < array[0].length; j++) 
+		    	        
+		    	       System.out.print(array[i][j] + " ");
+		    	       
+		    	      System.out.println();
+		    	     }
+		    Triki.Busqueda(array);
+		    }
+		  
+		
+		
+	}
+}
