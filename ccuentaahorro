@@ -1,0 +1,40 @@
+package cuenta;
+
+import clase.CCuenta;
+
+public class CCuentaAhorro extends CCuenta {
+	//atributos
+	private double coutaMantenimiento;
+	//metodos
+	
+	public CCuentaAhorro() {} //constructor sin parametros
+	public CCuentaAhorro(String nom, String cue, double sal, double tipo, double mant) {
+		
+		super(nom,cue, sal, tipo);// invoca al constructor ccuenta, esto es, al se la clase base
+		asignarCuotaManten(mant);
+	}
+	
+	public void asignarCuotaManten(double cantidad ) {
+		if (cantidad < 0) {
+			System.out.println("Error cantidad negativa");
+			return;
+		}
+		coutaMantenimiento=cantidad;
+	}
+	
+	public double obtenerCuotaManten() {
+		return coutaMantenimiento;
+	}
+	
+	public void reintegro(double cantidad) {
+		double saldo = estado();
+		double tipodeInteres = obtenerTipoDeInteres();
+		
+		if (tipoDeInteres >= 3.5) {
+			
+		}
+	}
+
+	
+	
+}
