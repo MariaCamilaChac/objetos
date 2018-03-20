@@ -1,0 +1,54 @@
+package ClassArray;
+
+public class Array {
+	
+	private String []letra= {"a","b","c","d","e","f","g"};
+	
+
+	private int [] array;
+	int numrandom;
+	
+	private Array(){}
+	
+	
+	private Array(int array[]){
+		
+		LLenarArray(array);
+		LLenarArray(letra);
+	}
+	
+	private void LLenarArray(String []array) {
+		for (int i = 0; i < array.length; i++) {
+			numrandom=(int) Math.round(Math.random() * 6 ); 
+		}
+		
+	}
+
+
+	private void LLenarArray(int array[]) {
+		for (int i = 0; i < array.length; i++) {
+			array[i]= (int) Math.random();
+		}
+	}
+	
+	
+	private int[] obtenerArrayN() {
+		return array;
+	}
+	
+
+	private String[] obtenerArrayL() {
+		array[numrandom];
+		return array;
+	}
+	
+	public static void main(String[] args) {
+		Array codigo = new Array();
+		int array[]=new int[10];
+		codigo.LLenarArray(array);
+		codigo.LLenarArray(array);
+		
+	}
+
+
+}
