@@ -22,3 +22,38 @@ public class OFF {
 
 
 }
+
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class OFF {
+
+	public static void exec(String cmd) {
+	    try {
+	        Runtime.getRuntime().exec(cmd);
+	    }
+	    catch (IOException e) {
+	        System.out.println("Failed");
+	    }
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		String entrada = null;
+		do {
+			System.out.println("está seguro que desea apagar el computador");
+			entrada = sc.next();
+			if (entrada == "OFF") {
+				exec("shutdown -s -t 3600");
+
+			}
+
+
+		}while(entrada != "OFF");
+
+	}
+
+}
