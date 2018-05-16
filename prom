@@ -1,0 +1,24 @@
+import java.util.Scanner ;
+public class prom{
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int x  = sc.nextInt();
+	
+		double sum=0;
+		double prom=0;
+		
+		for (int i = 0; i < x; i++) {
+			
+			sum = sum+ Integer.parseInt(sc.next());
+			
+		}
+		prom = sum /x;
+	System.out.println(prom);
+		
+		
+	}
+	
+	
+}
