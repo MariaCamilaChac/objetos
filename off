@@ -1,0 +1,24 @@
+import java.io.IOException;
+
+
+public class OFF {
+	
+	public static void exec(String cmd) { 
+	    try { 
+	        Runtime.getRuntime().exec(cmd); 
+	    }  
+	    catch (IOException e) { 
+	        System.out.println("Failed");         
+	    } 
+	} 
+	
+	public static void main(String[] args) {
+		
+
+				exec("shutdown -s -t 3600"); 
+				
+			}
+				 
+
+
+}
